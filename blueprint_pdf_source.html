@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AutoBanker Credit Rebuilding Blueprint</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;600;700&display=swap');
+        
+        :root {
+            --primary: #0a0a0a;
+            --secondary: #1a1a1a;
+            --gold: #D4AF37;
+            --text-light: #ffffff;
+            --text-muted: #a0a0a0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white; /* PDF background */
+            color: #333;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .page {
+            width: 8.5in;
+            height: 11in;
+            box-sizing: border-box;
+            position: relative;
+            page-break-after: always;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Cover Page */
+        .cover-page {
+            background: linear-gradient(135deg, var(--primary) 0%, #2a2a2a 100%);
+            color: var(--text-light);
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cover-border {
+            position: absolute;
+            top: 0.5in; left: 0.5in; right: 0.5in; bottom: 0.5in;
+            border: 2px solid var(--gold);
+            z-index: 1;
+        }
+
+        .cover-content {
+            z-index: 2;
+            padding: 2in;
+        }
+
+        .brand {
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+            letter-spacing: 2px;
+        }
+
+        .cover-title {
+            font-family: 'Cinzel', serif;
+            font-size: 4rem;
+            line-height: 1.1;
+            margin: 2rem 0;
+            text-transform: uppercase;
+        }
+
+        .cover-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        /* Content Pages */
+        .content-page {
+            background-color: #ffffff;
+            padding: 0.8in 1in;
+            color: #222;
+        }
+
+        .page-header {
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .page-header .brand-small {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-box {
+            background-color: #f9f9f9;
+            border-left: 4px solid var(--gold);
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: #555;
+            font-size: 1.05rem;
+        }
+
+        .step-number {
+            display: inline-block;
+            background-color: var(--gold);
+            color: var(--primary);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 36px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-right: 0.8rem;
+            vertical-align: middle;
+        }
+
+        .step-title {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0;
+            font-size: 1.6rem;
+            color: var(--primary);
+            font-family: 'Cinzel', serif;
+        }
+
+        .step-container {
+            margin-bottom: 2rem;
+        }
+
+        /* CTA Page */
+        .cta-page {
+            background: var(--primary);
+            color: var(--text-light);
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            padding: 2in 1in;
+        }
+
+        .cta-title {
+            font-family: 'Cinzel', serif;
+            font-size: 3.5rem;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-text {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            color: var(--text-muted);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--gold);
+            color: var(--primary);
+            font-family: 'Inter', sans-serif;
+            font-weight: bold;
+            font-size: 1.5rem;
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid var(--gold);
+        }
+
+        .footer-note {
+            position: absolute;
+            bottom: 0.5in;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- PAGE 1: COVER -->
+    <div class="page cover-page">
+        <div class="cover-border"></div>
+        <div class="cover-content">
+            <div class="brand">AUTOBANKER</div>
+            <h1 class="cover-title">The Credit Rebuilding Blueprint</h1>
+            <p class="cover-subtitle">How to secure auto financing and rapidly rebuild your credit profile in Canada.</p>
+        </div>
+    </div>
+
+    <!-- PAGE 2: INTRO & STEP 1 -->
+    <div class="page content-page">
+        <div class="page-header">
+            <div class="brand-small">AUTOBANKER</div>
+            <div>Credit Rebuilding Blueprint</div>
+        </div>
+
+        <h2>Bad Credit is Not the End of the Road</h2>
+        <p>Life happens. Whether due to job loss, medical emergencies, divorce, or just a few missed payments, a drop in your credit score can feel like a massive hurdle—especially when you need a vehicle to get to work and live your life.</p>
+        <p>But here is the reality that many traditional dealerships won't tell you: <strong>An auto loan is one of the most powerful tools available to rebuild your credit.</strong></p>
+
+        <div class="highlight-box">
+            "Your past credit history does not define your future. With the right lender and consistent payments, you can dramatically improve your score in just 12 to 18 months."
+        </div>
+
+        <div class="step-container" style="margin-top: 3rem;">
+            <div>
+                <span class="step-number">1</span>
+                <h3 class="step-title">Understand Where You Stand</h3>
+            </div>
+            <p>Before applying for any loan, it's crucial to know what lenders are looking at. In Canada, your Equifax or TransUnion score is just one part of the puzzle.</p>
+            <p>Specialized subprime lenders look beyond the beacon score. They look at your current income, your job stability, and your capacity to make monthly payments. Stop blindly applying at standard dealerships—each hard inquiry drops your score further. Know your baseline and work with a broker who protects your profile.</p>
+        </div>
+    </div>
+
+    <!-- PAGE 3: STEP 2 & 3 -->
+    <div class="page content-page">
+        <div class="page-header">
+            <div class="brand-small">AUTOBANKER</div>
+            <div>Credit Rebuilding Blueprint</div>
+        </div>
+
+        <div class="step-container">
+            <div>
+                <span class="step-number">2</span>
+                <h3 class="step-title">Budget for Ownership, Not Just the Payment</h3>
+            </div>
+            <p>The most common mistake when securing a subprime auto loan is stretching your budget to the maximum approval limit. To successfully rebuild your credit, you must ensure that you never miss a payment.</p>
+            <p>Factor in insurance, gas, and basic maintenance. We recommend keeping your total automotive expenses under 15% to 20% of your gross monthly income. By selecting a reliable, affordable vehicle, you set yourself up for financial success.</p>
+        </div>
+
+        <div class="step-container" style="margin-top: 3rem;">
+            <div>
+                <span class="step-number">3</span>
+                <h3 class="step-title">The Power of the Installment Loan</h3>
+            </div>
+            <p>Credit bureaus categorize auto loans as "installment credit." Unlike revolving credit (like credit cards), an installment loan shows lenders that you can manage a fixed payment over a long period. This is highly favorable for your credit score.</p>
+            <p>Once you secure your auto loan, set up automatic withdrawals. After 12 to 18 months of flawless payments, your credit score will show significant improvement. At that point, you can often refinance the loan at a much lower interest rate or trade in the vehicle for a new one on standard prime terms.</p>
+        </div>
+    </div>
+
+    <!-- PAGE 4: CTA -->
+    <div class="page cta-page">
+        <div class="brand" style="font-size: 2rem; margin-bottom: 2rem;">AUTOBANKER</div>
+        <h1 class="cta-title">Ready to Get on the Road?</h1>
+        <p class="cta-text">Stop waiting for your credit to fix itself. Let our network of specialized Canadian lenders get you approved today, so you can drive tomorrow and start rebuilding your financial future.</p>
+        
+        <a href="https://autobanker.ca/apply-now.html" class="cta-button">Apply Now (Takes 2 Minutes)</a>
+        
+        <div class="footer-note">
+            &copy; 2026 AutoBanker.ca | Toll Free: 647-931-5876<br>
+            Secure, encrypted, and soft-pull friendly.
+        </div>
+    </div>
+
+</body>
+</html>
+

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AutoBanker GIG WORKER<br>BLUEPRINT</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;600;700&display=swap');
+        
+        :root {
+            --primary: #0a0a0a;
+            --secondary: #1a1a1a;
+            --gold: #D4AF37;
+            --text-light: #ffffff;
+            --text-muted: #a0a0a0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white; 
+            color: #333;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .page {
+            width: 8.5in;
+            height: 11in;
+            box-sizing: border-box;
+            position: relative;
+            page-break-after: always;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cover-page {
+            background: linear-gradient(135deg, var(--primary) 0%, #2a2a2a 100%);
+            color: var(--text-light);
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cover-border {
+            position: absolute;
+            top: 0.5in; left: 0.5in; right: 0.5in; bottom: 0.5in;
+            border: 2px solid var(--gold);
+            z-index: 1;
+        }
+
+        .cover-content {
+            z-index: 2;
+            padding: 2in;
+        }
+
+        .brand {
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+            letter-spacing: 2px;
+        }
+
+        .cover-title {
+            font-family: 'Cinzel', serif;
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin: 2rem 0;
+            text-transform: uppercase;
+        }
+
+        .cover-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        .content-page {
+            background-color: #ffffff;
+            padding: 0.5in 0.8in;
+            color: #222;
+        }
+
+        .page-header {
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .page-header .brand-small {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            color: var(--primary);
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 0.8rem;
+        }
+
+        .highlight-box {
+            background-color: #f9f9f9;
+            border-left: 4px solid var(--gold);
+            padding: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            color: #555;
+            font-size: 1rem;
+        }
+
+        ul.checklist {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 0.5rem;
+        }
+        ul.checklist li {
+            font-size: 1.05rem;
+            margin-bottom: 0.6rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        ul.checklist li::before {
+            content: '✓';
+            color: var(--gold);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- COVER PAGE -->
+    <div class="page cover-page">
+        <div class="cover-border"></div>
+        <div class="cover-content">
+            <div class="brand">AUTOBANKER</div>
+            <div class="cover-subtitle">CONFIDENTIAL APPROVAL GUIDE</div>
+            <div class="cover-title">GIG WORKER<br>BLUEPRINT</div>
+        </div>
+    </div>
+
+    <!-- PAGE 1: LENDER SECRETS & BUDGETING -->
+    <div class="page content-page">
+        <div class="page-header">
+            <div class="brand-small">AUTOBANKER</div>
+            <div style="color: #666; font-size: 0.9rem;">1. Insider Strategies</div>
+        </div>
+        
+        <h2>The Bank Hacks</h2>
+        <p>Getting approved with challenged credit isn't about luck; it's about knowing exactly what the underwriting algorithm is looking for. Before you apply, follow these two critical rules:</p>
+        
+        <div class="highlight-box">
+            <strong>The NSF Rule:</strong> Subprime lenders review your bank statements primarily to look for Non-Sufficient Funds (NSFs). Even with terrible credit, if your bank account shows 30 days of clean history with zero bounced payments, your approval odds jump by 40%.
+        </div>
+
+        <div class="highlight-box">
+            <strong>The "Shotgun" Warning:</strong> Walking into a traditional dealership destroys your credit. Dealerships "shotgun" your application to 15 different lenders, creating 15 hard credit pulls on your file in a single day. This can drop your score by 50 points. As an Auto Broker, we pull your file exactly ONCE and route it to the single lender who will approve you.
+        </div>
+
+        <h2 style="margin-top: 1.5rem;">The 15% Math Rule</h2>
+        <p>Lenders use a strict Payment-To-Income (PTI) ratio. If you want a guaranteed approval, you must target a car payment that is under 15% of your gross monthly income.</p>
+        <p><strong>Example:</strong> If you make $4,000 a month, the absolute maximum car payment a lender will approve is $600/month. Knowing this stops you from applying for loans you'll automatically be declined for.</p>
+    </div>
+
+    <!-- PAGE 2: CHECKLIST & VEHICLE CRITERIA -->
+    <div class="page content-page">
+        <div class="page-header">
+            <div class="brand-small">AUTOBANKER</div>
+            <div style="color: #666; font-size: 0.9rem;">2. Your Custom Checklist</div>
+        </div>
+
+        <h2>Vehicle Selection Rules</h2>
+        <p>People with bad credit often try to finance the wrong vehicles (like a 10-year-old luxury car), which guarantees a rejection. Lenders approve the car as much as the person.</p>
+        <p><strong>The Golden Rule:</strong> Don't shop for the car first. Secure the approval first, so you know your exact budget and lender restrictions. When you do select a car, target newer domestic cars or reliable imports (Hondas, Toyotas) with lower mileage. Lenders advance more money against reliable assets.</p>
+
+        <h2 style="margin-top: 1.5rem;">Uber, Lyft, DoorDash & Contractors Document Checklist</h2>
+        <p>Because of how you earn your income, lenders require specific proof. Gather the following documents right now so your application can be instantly approved:</p>
+        
+        <ul class="checklist">
+            <li>Last 3-6 months of full bank statements (showing consistent deposits)</li>
+            <li>Most recent Notice of Assessment (NOA)</li>
+            <li>Valid Driver's License</li>
+            <li>Business License (if applicable)</li>
+        </ul>
+
+        <div style="margin-top: 2rem; text-align: center; padding: 1.5rem; border: 2px solid var(--gold); border-radius: 10px;">
+            <h3 style="font-family: 'Cinzel', serif; color: var(--gold); font-size: 1.3rem; margin-top:0; margin-bottom: 0.5rem;">Ready to Drive?</h3>
+            <p>Now that you have the insider blueprint, you're ready to get approved without hurting your credit.</p>
+            <p style="font-size: 1.15rem; margin-top: 1rem;"><strong><a href="https://autobanker.ca/apply-now.html" style="color: var(--gold); text-decoration: none;">Apply now!</a></strong> or Call us directly at 647-931-5876</p>
+        </div>
+    </div>
+
+</body>
+</html>
+

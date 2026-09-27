@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W65H4SVF');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Services Application | AutoBanker</title>
+    <meta name="description" content="Apply for premium auto financing services including credit rebuilding, VIP refinancing, vehicle sourcing, and cash back loans.">
+    <link rel="stylesheet" href="autobanker-styles.css?v=3">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        gold: '#D4AF37',
+                        dark: '#0B0F19',
+                        darker: '#06080D',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Outfit', sans-serif !important; }
+        nav, nav a, .brand-text { font-family: 'Cinzel', serif !important; }
+        .gradient-text {
+            background: linear-gradient(to right, #ffffff, #D4AF37);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        input[type=range] { accent-color: #D4AF37; }
+        .form-step { display: none; }
+        .form-step.active { display: block; }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W65H4SVF"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html" class="brand">
+            <img src="assets/autobanker-update.png" alt="AutoBanker Logo" class="brand-logo">
+        </a>
+        
+        <!-- Mobile Hamburger Toggle -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu">
+        <label for="menu-toggle" class="hamburger" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <div class="nav-links">
+            <a href="autobanker-about.html">About Us</a>
+            <a href="autobanker-services.html">Premium Services</a>
+            <a href="autobanker-faq.html">FAQ</a>
+            <a href="index.html#how-it-works">How It Works</a>
+            <a href="index.html#calculator">Loan Calculator</a>
+            <a href="#footer">Resources</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-24 bg-darker relative px-4" style="min-height: 80vh; display: flex; align-items: center; justify-content: center;">
+        <div class="max-w-3xl w-full mx-auto">
+            <div class="glass-panel rounded-3xl p-8 lg:p-10 relative" id="apply">
+                <div class="mb-8">
+                    <h2 class="text-3xl font-display font-bold gradient-text mb-2">Premium Application</h2>
+                    <p class="text-gray-400 text-sm">Tailored solutions for your financial needs.</p>
+                </div>
+
+                <!-- Progress -->
+                <div class="w-full h-1.5 bg-white/10 rounded-full mb-8 overflow-hidden">
+                    <div id="progressBar" class="h-full bg-gold transition-all duration-500 ease-out" style="width: 10%;"></div>
+                </div>
+
+                <div class="flex justify-between items-center mb-6">
+                    <h3 id="stepTitle" class="text-xl font-semibold">Select Service</h3>
+                </div>
+
+                <form id="premiumForm" onsubmit="return false;" class="min-h-[300px] flex flex-col justify-between">
+                    <!-- Step 1: Select Service -->
+                    <div class="form-step active" data-step="service" data-type="radio">
+                        <p class="mb-4 text-gray-300">Which premium service are you applying for?</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <label class="cursor-pointer">
+                                <input type="radio" name="serviceType" value="Credit Rebuilding" class="peer sr-only" required>
+                                <div class="p-6 border border-white/10 rounded-xl peer-checked:border-gold peer-checked:bg-gold/10 hover:bg-white/5 transition-all text-center font-medium">Credit Rebuilding</div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="serviceType" value="VIP Refinancing" class="peer sr-only">
+                                <div class="p-6 border border-white/10 rounded-xl peer-checked:border-gold peer-checked:bg-gold/10 hover:bg-white/5 transition-all text-center font-medium">VIP Refinancing</div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="serviceType" value="Vehicle Sourcing" class="peer sr-only">
+                                <div class="p-6 border border-white/10 rounded-xl peer-checked:border-gold peer-checked:bg-gold/10 hover:bg-white/5 transition-all text-center font-medium">Vehicle Sourcing</div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="serviceType" value="Cash Back Loans" class="peer sr-only">
+                                <div class="p-6 border border-white/10 rounded-xl peer-checked:border-gold peer-checked:bg-gold/10 hover:bg-white/5 transition-all text-center font-medium">Cash Back Loans</div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- PATH A: Credit Rebuilding -->
+                    <div class="form-step" data-step="a_credit" data-type="radio" data-title="Credit Score">
+                        <p class="mb-4 text-gray-300">What is your estimated credit score?</p>
+                        <div class="space-y-3">
+                            <label class="block cursor-pointer"><input type="radio" name="creditScore" value="Good" class="peer sr-only"><div class="p-4 border border-white/10 rounded-xl peer-checked:border-gold peer-checked:bg-gold/10">Good (650+)</div></label>
+                            <label class="block cursor-pointer"><input type="radio" name="creditScore" value="Fair" class="peer sr-only"><div class="p-4 border border-white/10 rounded-xl peer-checked:border-gold peer-checked:bg-gold/10">Fair (550-649)</div></label>
+                            <label class="block cursor-pointer"><input type="radio" name="creditScore" value="Poor" class="peer sr-only"><div class="p-4 border border-white/10 rounded-xl peer-checked:border-gold peer-checked:bg-gold/10">Poor (Under 550)</div></label>
+                        </div>
+                    </div>
+                    <div class="form-step" data-step="a_vehicle" data-type="radio" data-title="Vehicle Type">
+                        <p class="mb-4 text-gray-300">What type of vehicle are you looking for?</p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <label class="cursor-pointer"><input type="radio" name="vehicleType" value="Car" class="peer sr-only"><div class="p-4 border border-white/10 rounded-xl peer-checked:border-gold peer-checked:bg-gold/10 text-center">Car</div></label>
+                            <label class="cursor-pointer"><input type="radio" name="vehicleType" value="SUV" class="peer sr-only"><div class="p-4 border border-white/10 rounded-xl peer-checked:border-gold peer-checked:bg-gold/10 text-center">SUV</div></label>
+                            <label class="cursor-pointer"><input type="radio" name="vehicleType" value="Truck" class="peer sr-only"><div class="p-4 border border-white/10 rounded-xl peer-checked:border-gold peer-checked:bg-gold/10 text-center">Truck</div></label>
+                            <label class="cursor-pointer"><input type="radio" name="vehicleType" value="Van" class="peer sr-only"><div class="p-4 border border-white/10 rounded-xl peer-checked:border-gold peer-checked:bg-gold/10 text-center">Van</div></label>
+                        </div>
+                    </div>
+                    <div class="form-step" data-step="a_budget" data-type="radio" data-title="Monthly Budget">
+                        <p class="mb-4 text-gray-300">What is your estimated monthly budget?</p>
+                        <div class="space-y-3">
+                            <label class="block cursor-pointer"><input type="radio" name="budget" value="Under $400" class="peer sr-only"><div class="p-4 border border-white/10 rounded-xl peer-checked:border-gold peer-checked:bg-gold/10">Under $400/mo</div></label>
+                            <label class="block cursor-pointer"><input type="radio" name="budget" value="$400-$500" class="peer sr-only"><div class="p-4 border border-white/10 rounded-xl peer-checked:border-gold peer-checked:bg-gold/10">$400 - $500/mo</div></label>
+                            <label class="block cursor-pointer"><input type="radio" name="budget" value="Over $500" class="peer sr-only"><div class="p-4 border border-white/10 rounded-xl peer-checked:border-gold peer-checked:bg-gold/10">Over $500/mo</div></label>
+                        </div>
+                    </div>
+                    <div class="form-step" data-step="a_income" data-type="text" data-title="Monthly Income">
+                        <p class="mb-4 text-gray-300">What is your approximate monthly income?</p>
+                        <input type="number" name="monthlyIncome" class="w-full bg-darker border border-white/10 rounded-xl p-4 text-white focus:border-gold outline-none" placeholder="$ e.g. 3000">
+                    </div>
+
+                    <!-- PATH B: VIP Refinancing -->
+                    <div class="form-step" data-step="b_vehicle" data-type="text" data-title="Current Vehicle">
+                        <p class="mb-4 text-gray-300">Current Vehicle (Make/Model/Year)</p>
+                        <input type="text" name="currentVehicle" class="w-full bg-darker border border-white/10 rounded-xl p-4 text-white focus:border-gold outline-none" placeholder="e.g. 2019 Honda Civic">
+                    </div>
+                    <div class="form-step" data-step="b_mileage" data-type="text" data-title="Mileage">
+                        <p class="mb-4 text-gray-300">Approximate Mileage (km)</p>
+                        <input type="number" name="mileage" class="w-full bg-darker border border-white/10 rounded-xl p-4 text-white focus:border-gold outline-none" placeholder="e.g. 60000">
+                    </div>
+                    <div class="form-step" data-step="b_payment" data-type="text" data-title="Current Payment">
+                        <p class="mb-4 text-gray-300">Current Monthly Payment</p>
+                        <input type="number" name="currentPayment" class="w-full bg-darker border border-white/10 rounded-xl p-4 text-white focus:border-gold outline-none" placeholder="$">
+                    </div>
+                    <div class="form-step" data-step="b_balance" data-type="text" data-title="Loan Balance">
+                        <p class="mb-4 text-gray-300">Estimated Loan Balance</p>
+                        <input type="number" name="loanBalance" class="w-full bg-darker border border-white/10 rounded-xl p-4 text-white focus:border-gold outline-none" placeholder="$">
+                    </div>
+
+                    <!-- PATH C: Vehicle Sourcing -->
+                    <div class="form-step" data-step="c_desired" data-type="text" data-title="Desired Vehicle">
+                        <p class="mb-4 text-gray-300">Desired Make and Model</p>
+                        <input type="text" name="desiredVehicle" class="w-full bg-darker border border-white/10 rounded-xl p-4 text-white focus:border-gold outline-none" placeholder="e.g. Toyota RAV4">
+                    </div>
+                    <div class="form-step" data-step="c_year" data-type="text" data-title="Year Range">
+                        <p class="mb-4 text-gray-300">Desired Year Range</p>
+                        <input type="text" name="yearRange" class="w-full bg-darker border border-white/10 rounded-xl p-4 text-white focus:border-gold outline-none" placeholder="e.g. 2018-2022">
+                    </div>
+                    <div class="form-step" data-step="c_features" data-type="text" data-title="Features">
+                        <p class="mb-4 text-gray-300">Must-Have Features</p>
+                        <input type="text" name="features" class="w-full bg-darker border border-white/10 rounded-xl p-4 text-white focus:border-gold outline-none" placeholder="e.g. AWD, Sunroof, Leather">
+                    </div>
+                    <div class="form-step" data-step="c_tradein" data-type="radio" data-title="Trade-In">
+                        <p class="mb-4 text-gray-300">Do you have a vehicle to trade in?</p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <label class="block cursor-pointer"><input type="radio" name="tradeIn" value="Yes" class="peer sr-only"><div class="p-4 border border-white/10 rounded-xl peer-checked:border-gold peer-checked:bg-gold/10 text-center">Yes</div></label>
+                            <label class="block cursor-pointer"><input type="radio" name="tradeIn" value="No" class="peer sr-only"><div class="p-4 border border-white/10 rounded-xl peer-checked:border-gold peer-checked:bg-gold/10 text-center">No</div></label>
+                        </div>
+                    </div>
+
+                    <!-- PATH D: Cash Back Loans -->
+                    <div class="form-step" data-step="d_cash" data-type="text" data-title="Cash Back">
+                        <p class="mb-4 text-gray-300">Desired Cash Back Amount</p>
+                        <input type="number" name="cashBack" class="w-full bg-darker border border-white/10 rounded-xl p-4 text-white focus:border-gold outline-none" placeholder="$">
+                    </div>
+                    <div class="form-step" data-step="d_debt" data-type="text" data-title="Total Debt">
+                        <p class="mb-4 text-gray-300">Total Debt to Consolidate</p>
+                        <input type="number" name="totalDebt" class="w-full bg-darker border border-white/10 rounded-xl p-4 text-white focus:border-gold outline-none" placeholder="$">
+                    </div>
+                    <div class="form-step" data-step="d_vehicle" data-type="radio" data-title="Vehicle Type">
+                        <p class="mb-4 text-gray-300">What type of vehicle are you looking for?</p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <label class="cursor-pointer"><input type="radio" name="cb_vehicleType" value="Car" class="peer sr-only"><div class="p-4 border border-white/10 rounded-xl peer-checked:border-gold peer-checked:bg-gold/10 text-center">Car</div></label>
+                            <label class="cursor-pointer"><input type="radio" name="cb_vehicleType" value="SUV" class="peer sr-only"><div class="p-4 border border-white/10 rounded-xl peer-checked:border-gold peer-checked:bg-gold/10 text-center">SUV</div></label>
+                            <label class="cursor-pointer"><input type="radio" name="cb_vehicleType" value="Truck" class="peer sr-only"><div class="p-4 border border-white/10 rounded-xl peer-checked:border-gold peer-checked:bg-gold/10 text-center">Truck</div></label>
+                            <label class="cursor-pointer"><input type="radio" name="cb_vehicleType" value="Van" class="peer sr-only"><div class="p-4 border border-white/10 rounded-xl peer-checked:border-gold peer-checked:bg-gold/10 text-center">Van</div></label>
+                        </div>
+                    </div>
+                    <div class="form-step" data-step="d_income" data-type="text" data-title="Monthly Income">
+                        <p class="mb-4 text-gray-300">What is your approximate monthly income?</p>
+                        <input type="number" name="cb_monthlyIncome" class="w-full bg-darker border border-white/10 rounded-xl p-4 text-white focus:border-gold outline-none" placeholder="$ e.g. 3000">
+                    </div>
+
+                    <!-- FINAL STEPS -->
+                    <div class="form-step" data-step="final_address" data-type="text" data-title="Address">
+                        <p class="mb-4 text-gray-300">Where are you located?</p>
+                        <div class="space-y-4">
+                            <input type="text" name="address" class="w-full bg-darker border border-white/10 rounded-xl p-4 text-white focus:border-gold outline-none" placeholder="Street Address" required>
+                            <div class="flex gap-4">
+                                <input type="text" name="city" class="flex-2 w-full bg-darker border border-white/10 rounded-xl p-4 text-white focus:border-gold outline-none" placeholder="City" required>
+                                <select name="province" class="flex-1 w-full bg-darker border border-white/10 rounded-xl p-4 text-white focus:border-gold outline-none" required>
+                                    <option value="" disabled selected>Prov</option>
+                                    <option value="ON">ON</option>
+                                    <option value="AB">AB</option>
+                                    <option value="BC">BC</option>
+                                    <option value="MB">MB</option>
+                                    <option value="NB">NB</option>
+                                    <option value="NL">NL</option>
+                                    <option value="NS">NS</option>
+                                    <option value="PE">PE</option>
+                                    <option value="QC">QC</option>
+                                    <option value="SK">SK</option>
+                                </select>
+                            </div>
+                            <input type="text" name="postalCode" class="w-full bg-darker border border-white/10 rounded-xl p-4 text-white focus:border-gold outline-none" placeholder="Postal Code" required>
+                        </div>
+                    </div>
+                    <div class="form-step" data-step="final_contact" data-type="text" data-title="Contact Info">
+                        <p class="mb-4 text-gray-300">Almost done! What are your contact details?</p>
+                        <div class="space-y-4">
+                            <div class="flex gap-4">
+                                <input type="text" name="firstName" class="w-full bg-darker border border-white/10 rounded-xl p-4 text-white focus:border-gold outline-none" placeholder="First Name" required>
+                                <input type="text" name="lastName" class="w-full bg-darker border border-white/10 rounded-xl p-4 text-white focus:border-gold outline-none" placeholder="Last Name" required>
+                            </div>
+                            <input type="email" name="email" class="w-full bg-darker border border-white/10 rounded-xl p-4 text-white focus:border-gold outline-none" placeholder="Email Address" required>
+                            <input type="tel" name="phone" class="w-full bg-darker border border-white/10 rounded-xl p-4 text-white focus:border-gold outline-none" placeholder="Phone Number" required>
+                        </div>
+                    </div>
+                    <div class="form-step text-center" data-step="final_submit" data-type="submit" data-title="Complete">
+                        <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gold/20 text-gold mb-4">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
+                        <p class="text-xl font-bold mb-2">Ready to Submit</p>
+                        <p class="text-gray-400 text-sm mb-8">Click submit to complete your application.</p>
+                        <button type="submit" id="btnSubmit" class="px-8 py-3 rounded-xl font-bold bg-gold text-darker hover:bg-yellow-500 transition-all shadow-[0_0_15px_rgba(212,175,55,0.4)]">Submit Application</button>
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="mt-8 flex justify-between">
+                        <button type="button" id="btnBack" class="px-6 py-3 rounded-xl font-semibold text-gray-400 hover:text-white hover:bg-white/5 transition-all" style="display: none;">Back</button>
+                        <button type="button" id="btnNext" class="ml-auto px-8 py-3 rounded-xl font-bold bg-gold text-darker hover:bg-yellow-500 transition-all shadow-[0_0_15px_rgba(212,175,55,0.4)]" style="display: none;">Continue</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Footer -->
+    <footer class="site-footer" id="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <img src="assets/autobanker-update.png" alt="AutoBanker Logo" class="footer-logo">
+                <p>Premium subprime auto financing and guaranteed car loan approvals. Proudly serving the Greater Toronto Area (GTA) & Ontario.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="auto-loans/zero-down.html">Zero Down Loans</a></li>
+                    <li><a href="auto-loans/new-immigrant.html">New Immigrant Financing</a></li>
+                    <li><a href="auto-loans/bankruptcy.html">Bankruptcy Car Loans</a></li>
+                    </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Learning Centre</h4>
+                <ul>
+                    <li><a href="articles/consumer-proposal.html">Car Loan After Consumer Proposal</a></li>
+                    <li><a href="articles/minimum-credit-score.html">Minimum Credit Score in Ontario</a></li>
+                    <li><a href="articles/rebuilding-credit.html">Rebuilding Credit With a Car Loan</a></li>
+                    <li><a href="autobanker-faq.html">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact & Legal</h4>
+                <ul>
+                    <li>📞 +1-647-931-5876</li>
+                    <li>✉️ info@autobanker.ca</li>
+                    <li><a href="autobanker-privacy.html">Privacy Policy</a></li>
+                    <li><a href="autobanker-terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AutoBanker.ca. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="premium-form.js"></script>
+</body>
+</html>
+
+
