@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AutoBanker Credit Building Guide</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;600;700&display=swap');
+        
+        :root {
+            --gold: #D4AF37;
+            --primary: #06080D;
+            --secondary: #0B0F19;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .page {
+            width: 8.5in;
+            height: 11in;
+            box-sizing: border-box;
+            position: relative;
+            page-break-after: always;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+        }
+
+        /* COVER PAGE */
+        .cover-page {
+            background-color: var(--primary);
+            color: white;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .cover-border {
+            position: absolute;
+            top: 0.5in;
+            bottom: 0.5in;
+            left: 0.5in;
+            right: 0.5in;
+            border: 2px solid var(--gold);
+            pointer-events: none;
+        }
+
+        .cover-content {
+            z-index: 10;
+            padding: 2in;
+        }
+
+        .brand {
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            color: var(--gold);
+            margin-bottom: 2rem;
+            letter-spacing: 2px;
+        }
+
+        .cover-subtitle {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #aaa;
+            margin-bottom: 1rem;
+        }
+
+        .cover-title {
+            font-family: 'Cinzel', serif;
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+        }
+
+        /* CONTENT PAGES */
+        .content-page {
+            padding: 0.5in 0.8in;
+            color: #222;
+        }
+
+        .page-header {
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .page-header .brand-small {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            color: var(--primary);
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+        
+        h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 0.8rem;
+        }
+
+        .highlight-box {
+            background-color: #f9f9f9;
+            border-left: 4px solid var(--gold);
+            padding: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            color: #555;
+            font-size: 1rem;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .stat-card {
+            border: 1px solid #eee;
+            padding: 1rem;
+            border-radius: 8px;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- COVER PAGE -->
+    <div class="page cover-page">
+        <div class="cover-border"></div>
+        <div class="cover-content">
+            <div class="brand">AUTOBANKER</div>
+            <div class="cover-subtitle">INSIDER STRATEGY GUIDE</div>
+            <div class="cover-title">The Credit<br>Recovery Playbook</div>
+        </div>
+    </div>
+
+    <!-- PAGE 1: HOW CREDIT REALLY WORKS -->
+    <div class="page content-page">
+        <div class="page-header">
+            <div class="brand-small">AUTOBANKER</div>
+            <div style="color: #666; font-size: 0.9rem;">1. Decoding the Score</div>
+        </div>
+
+        <h2>How Equifax & TransUnion Actually Score You</h2>
+        <p>Before you can rebuild your credit, you need to know exactly how the algorithms grade you. Many Canadians waste years trying to fix their credit because they focus on the wrong things.</p>
+        
+        <div class="grid-2">
+            <div class="stat-card">
+                <h3 style="margin-top: 0; font-size: 1.2rem; color: var(--gold);">35% - Payment History</h3>
+                <p style="font-size: 0.9rem;">The biggest factor. A single 30-day late payment can drop your score by up to 100 points. Consistency is everything.</p>
+            </div>
+            <div class="stat-card">
+                <h3 style="margin-top: 0; font-size: 1.2rem; color: var(--gold);">30% - Credit Utilization</h3>
+                <p style="font-size: 0.9rem;">How much of your available credit card limits you are using. Maxed-out cards tank your score immediately.</p>
+            </div>
+            <div class="stat-card">
+                <h3 style="margin-top: 0; font-size: 1.2rem; color: var(--gold);">15% - Credit Age</h3>
+                <p style="font-size: 0.9rem;">The average age of all your accounts. Never close your oldest credit card, even if you don't use it anymore.</p>
+            </div>
+            <div class="stat-card">
+                <h3 style="margin-top: 0; font-size: 1.2rem; color: var(--gold);">10% - Credit Mix</h3>
+                <p style="font-size: 0.9rem;">Having only credit cards is bad. Lenders want to see a mix of revolving credit (cards) and installment credit (car loans).</p>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 1.5rem;">The Installment Loan Secret</h2>
+        <p>If you have bad credit, getting another credit card will barely move your score. Credit cards are "revolving credit," which lenders view as high-risk.</p>
+        <p>An auto loan is an <strong>installment loan</strong>. Because it is backed by an asset (the car) and has a fixed payment schedule, the credit bureaus weigh it heavily. Making 6 to 12 months of on-time payments on an auto loan is mathematically the fastest way to force your credit score to jump back into the "Good" range.</p>
+
+        <div class="highlight-box">
+            <strong>Insider Secret:</strong> After 12 months of perfect payments on a subprime car loan, your score will usually improve enough to qualify for <strong>VIP Refinancing</strong>, cutting your interest rate in half.
+        </div>
+    </div>
+
+    <!-- PAGE 2: ACTION STEPS -->
+    <div class="page content-page">
+        <div class="page-header">
+            <div class="brand-small">AUTOBANKER</div>
+            <div style="color: #666; font-size: 0.9rem;">2. Instant Boost Strategies</div>
+        </div>
+
+        <h2>3 Steps to Boost Your Score Today</h2>
+        
+        <h3>1. The 30% Utilization Rule</h3>
+        <p>If you have a credit card with a $1,000 limit, never let the balance go above $300 (30%). If your cards are currently maxed out, your score is being artificially suppressed. Paying them down to below 30% will trigger an immediate, massive jump in your score the moment the statement cuts next month.</p>
+
+        <h3>2. Soft Pulls vs Hard Pulls</h3>
+        <p>Every time a bank checks your credit to approve a loan, it records a "Hard Pull," which drops your score by 5 to 10 points. If you visit a traditional dealership, they might send your application to 10 different banks at once, causing 10 hard pulls and instantly ruining your credit. Always use an auto broker (like AutoBanker) who performs a single soft pull to evaluate your file.</p>
+
+        <h3>3. Dispute Bureau Errors</h3>
+        <p>Over 20% of Canadians have errors on their Equifax or TransUnion reports. You might have late payments listed that you actually paid on time, or old collections that should have fallen off after 6 years. Order your free report directly from Equifax.ca and dispute any errors—they are legally required to remove them within 30 days if they cannot prove them.</p>
+
+        <div style="margin-top: 2rem; text-align: center; padding: 1.5rem; border: 2px solid var(--gold); border-radius: 10px;">
+            <h3 style="font-family: 'Cinzel', serif; color: var(--gold); font-size: 1.3rem; margin-top:0; margin-bottom: 0.5rem;">Ready to Rebuild?</h3>
+            <p>The fastest way to fix your credit is by driving a car you love with an affordable payment.</p>
+            <p style="font-size: 1.15rem; margin-top: 1rem;"><strong><a href="https://autobanker.ca/apply-now.html" style="color: var(--gold); text-decoration: none;">Apply now!</a></strong> or Call us directly at 647-931-5876</p>
+        </div>
+    </div>
+
+</body>
+</html>
