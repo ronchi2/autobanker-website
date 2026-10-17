@@ -1033,3 +1033,16 @@ select.form-control {
         gap: 2rem;
     }
 }
+
+/* Mobile CTA in Nav Menu */
+.mobile-cta {
+    display: none;
+}
+@media (max-width: 768px) {
+    .mobile-cta {
+        display: block;
+        color: var(--gold-accent) !important;
+        font-weight: 700;
+        margin-top: 0.5rem;
+    }
+}

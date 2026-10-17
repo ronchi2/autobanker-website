@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const interestRateInput = document.getElementById('interestRate');
     const salesTax = document.getElementById('salesTax');
     const paymentFrequency = document.getElementById('paymentFrequency');
+    const creditTierBtns = document.querySelectorAll('[data-credit-rate]');
 
     // Values
     const priceVal = document.getElementById('priceVal');
@@ -28,6 +29,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const resultAmount = document.getElementById('resultAmount');
     const appliedRate = document.getElementById('appliedRate');
     const totalLoanVal = document.getElementById('totalLoanVal');
+
+    if (!calcMode || !priceSlider) return;
 
     function formatCurrency(value) {
         return Math.max(0, parseInt(value)).toLocaleString();
@@ -47,10 +50,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const mode = calcMode.value;
         const freq = parseInt(paymentFrequency.value);
         const freqName = getFrequencyName(paymentFrequency.value);
-        const t = parseFloat(tradeIn.value) || 0;
-        const o = parseFloat(owedTradeIn.value) || 0;
-        const d = parseFloat(downSlider.value) || 0;
-        const r_tax = (parseFloat(salesTax.value) || 0) / 100;
+        const t = parseFloat(tradeIn?.value) || 0;
+        const o = parseFloat(owedTradeIn?.value) || 0;
+        const d = parseFloat(downSlider?.value) || 0;
+        const r_tax = (parseFloat(salesTax?.value) || 13) / 100;
         
         const months = parseInt(termSlider.value);
         const annualRate = parseFloat(interestRateInput.value) || 0;
@@ -104,30 +107,46 @@ document.addEventListener('DOMContentLoaded', function() {
             totalLoanVal.innerText = '$' + max_loan.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
         }
 
-        appliedRate.innerText = annualRate;
+        if (appliedRate) appliedRate.innerText = annualRate;
     }
 
-    // Update UI on input
     function updateUI() {
         if (calcMode.value === 'payment') {
-            groupVehiclePrice.style.display = 'block';
-            groupDesiredPayment.style.display = 'none';
+            if (groupVehiclePrice) groupVehiclePrice.style.display = 'flex';
+            if (groupDesiredPayment) groupDesiredPayment.style.display = 'none';
         } else {
-            groupVehiclePrice.style.display = 'none';
-            groupDesiredPayment.style.display = 'block';
+            if (groupVehiclePrice) groupVehiclePrice.style.display = 'none';
+            if (groupDesiredPayment) groupDesiredPayment.style.display = 'flex';
         }
 
-        priceVal.innerText = formatCurrency(priceSlider.value);
-        desiredVal.innerText = formatCurrency(desiredPayment.value);
-        tradeInVal.innerText = formatCurrency(tradeIn.value);
-        owedTradeInVal.innerText = formatCurrency(owedTradeIn.value);
-        downVal.innerText = formatCurrency(downSlider.value);
-        termVal.innerText = termSlider.value;
+        if (priceVal && priceSlider) priceVal.innerText = formatCurrency(priceSlider.value);
+        if (desiredVal && desiredPayment) desiredVal.innerText = formatCurrency(desiredPayment.value);
+        if (tradeInVal && tradeIn) tradeInVal.innerText = formatCurrency(tradeIn.value);
+        if (owedTradeInVal && owedTradeIn) owedTradeInVal.innerText = formatCurrency(owedTradeIn.value);
+        if (downVal && downSlider) downVal.innerText = formatCurrency(downSlider.value);
+        if (termVal && termSlider) termVal.innerText = termSlider.value;
 
         calculateLoan();
     }
 
-    // Event Listeners
+    // Credit Tier Quick-Select Buttons (GetGoing 2-Click Estimator Pattern)
+    creditTierBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            creditTierBtns.forEach(b => {
+                b.classList.remove('border-gold', 'bg-gold/15', 'text-gold');
+                b.classList.add('border-white/10', 'text-gray-300');
+            });
+            btn.classList.remove('border-white/10', 'text-gray-300');
+            btn.classList.add('border-gold', 'bg-gold/15', 'text-gold');
+
+            const rate = btn.getAttribute('data-credit-rate');
+            if (interestRateInput && rate) {
+                interestRateInput.value = rate;
+                updateUI();
+            }
+        });
+    });
+
     const inputs = [calcMode, priceSlider, desiredPayment, tradeIn, owedTradeIn, downSlider, termSlider, interestRateInput, salesTax, paymentFrequency];
     inputs.forEach(input => {
         if (input) {
@@ -136,6 +155,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Initial calculation
     updateUI();
 });

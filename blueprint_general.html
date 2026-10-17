@@ -4,19 +4,23 @@
     <meta charset="UTF-8">
     <title>AutoBanker Credit Building Guide</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;600;700&display=swap');
         
         :root {
             --gold: #D4AF37;
-            --primary: #06080D;
-            --secondary: #0B0F19;
+            --primary: #0B0F19;      /* Darkest navy/black */
+            --secondary: #1A2235;    /* Lighter navy */
+            --text-dark: #222222;    /* Main body text */
+            --text-muted: #555555;   /* Secondary text */
+            --bg-light: #FAFAFA;     /* Light off-white */
         }
 
         body {
             font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
+            background-color: #e5e5e5;
+            -webkit-print-color-adjust: exact;
         }
 
         .page {
@@ -31,7 +35,7 @@
             background-color: #ffffff;
         }
 
-        /* COVER PAGE */
+        /* ---------------- COVER PAGE ---------------- */
         .cover-page {
             background-color: var(--primary);
             color: white;
@@ -42,52 +46,81 @@
 
         .cover-border {
             position: absolute;
-            top: 0.5in;
-            bottom: 0.5in;
-            left: 0.5in;
-            right: 0.5in;
-            border: 2px solid var(--gold);
+            top: 0.75in;
+            bottom: 0.75in;
+            left: 0.75in;
+            right: 0.75in;
+            border: 1px solid rgba(212, 175, 55, 0.5);
             pointer-events: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+
+        .cover-top {
+            font-family: 'Inter', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 0.85rem;
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .cover-bottom {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.6);
+            letter-spacing: 1px;
         }
 
         .cover-content {
             z-index: 10;
-            padding: 2in;
+            padding: 2in 1.5in;
         }
 
         .brand {
             font-family: 'Cinzel', serif;
-            font-size: 3rem;
-            color: var(--gold);
-            margin-bottom: 2rem;
-            letter-spacing: 2px;
+            font-size: 3.5rem;
+            color: #FFFFFF;
+            margin-bottom: 0.5rem;
+            letter-spacing: 3px;
         }
 
-        .cover-subtitle {
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: #aaa;
-            margin-bottom: 1rem;
+        .cover-divider {
+            width: 60px;
+            height: 2px;
+            background-color: var(--gold);
+            margin: 1.5rem auto;
         }
 
         .cover-title {
             font-family: 'Cinzel', serif;
-            font-size: 4rem;
+            font-size: 4.5rem;
             line-height: 1.1;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
+            color: var(--gold);
         }
 
-        /* CONTENT PAGES */
+        .cover-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            font-size: 1.3rem;
+            line-height: 1.6;
+            color: #d1d5db;
+        }
+
+        /* ---------------- CONTENT PAGES ---------------- */
         .content-page {
-            padding: 0.5in 0.8in;
-            color: #222;
+            padding: 1in;
+            color: var(--text-dark);
         }
 
         .page-header {
-            border-bottom: 2px solid var(--gold);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
+            border-bottom: 1px solid #E5E7EB;
+            padding-bottom: 0.75rem;
+            margin-bottom: 2.5rem;
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
@@ -95,68 +128,216 @@
 
         .page-header .brand-small {
             font-family: 'Cinzel', serif;
+            color: var(--primary);
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .page-header .section-title {
+            font-family: 'Inter', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
             color: var(--gold);
-            font-size: 1.3rem;
-            font-weight: bold;
+            font-size: 0.75rem;
+            font-weight: 600;
         }
 
         h2 {
             font-family: 'Cinzel', serif;
-            font-size: 2rem;
+            font-size: 2.4rem;
             color: var(--primary);
             margin-top: 0;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
         }
         
         h3 {
-            font-family: 'Cinzel', serif;
-            font-size: 1.4rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.2rem;
             color: var(--primary);
-            margin-top: 1.5rem;
-            margin-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         p {
-            font-size: 1rem;
-            line-height: 1.5;
-            margin-bottom: 0.8rem;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-top: 0;
+            margin-bottom: 1.25rem;
+            color: var(--text-muted);
         }
 
-        .highlight-box {
-            background-color: #f9f9f9;
+        .lead-paragraph {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            color: var(--primary);
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+
+        /* Pull Quote / Secret Box */
+        .pull-quote {
+            background-color: var(--bg-light);
             border-left: 4px solid var(--gold);
-            padding: 1rem;
-            margin: 1rem 0;
-            font-style: italic;
-            color: #555;
-            font-size: 1rem;
+            padding: 1.5rem 2rem;
+            margin: 2.5rem 0;
         }
 
+        .pull-quote-title {
+            font-family: 'Inter', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--gold);
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .pull-quote p {
+            font-size: 1.15rem;
+            color: var(--primary);
+            font-style: italic;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* Stats Grid */
         .grid-2 {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-            margin-top: 1rem;
+            gap: 2rem;
+            margin: 2.5rem 0;
         }
         
         .stat-card {
-            border: 1px solid #eee;
-            padding: 1rem;
-            border-radius: 8px;
-            background: #fff;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border-top: 3px solid var(--primary);
+            background: var(--bg-light);
+            padding: 1.5rem;
         }
+
+        .stat-card h4 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.75rem;
+            color: var(--gold);
+            margin: 0 0 0.5rem 0;
+        }
+
+        .stat-card p {
+            font-size: 0.95rem;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* CTA Box */
+        .cta-box {
+            margin-top: 3.5rem;
+            background-color: var(--primary);
+            padding: 2.5rem;
+            text-align: center;
+            color: white;
+            border-radius: 8px;
+        }
+
+        .cta-box h3 {
+            color: var(--gold);
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            text-transform: none;
+            letter-spacing: 0;
+        }
+
+        .cta-box p {
+            color: #d1d5db;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .cta-link {
+            display: inline-block;
+            background-color: var(--gold);
+            color: var(--primary);
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.95rem;
+        }
+
+        .page-footer {
+            position: absolute;
+            bottom: 0.75in;
+            left: 1in;
+            right: 1in;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            color: #9CA3AF;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 1px;
+            border-top: 1px solid #E5E7EB;
+            padding-top: 0.5rem;
+        }
+
+        /* Ordered List Styling */
+        ol.custom-list {
+            list-style: none;
+            counter-reset: my-counter;
+            padding: 0;
+            margin: 0;
+        }
+        
+        ol.custom-list li {
+            counter-increment: my-counter;
+            margin-bottom: 2rem;
+            padding-left: 3rem;
+            position: relative;
+        }
+        
+        ol.custom-list li::before {
+            content: counter(my-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-family: 'Cinzel', serif;
+            font-size: 1.75rem;
+            font-weight: bold;
+            color: var(--gold);
+            line-height: 1;
+        }
+
+        ol.custom-list h4 {
+            margin: 0 0 0.5rem 0;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.15rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
     </style>
 </head>
 <body>
 
     <!-- COVER PAGE -->
     <div class="page cover-page">
-        <div class="cover-border"></div>
+        <div class="cover-border">
+            <div class="cover-top">Exclusive Strategy Guide</div>
+            <div class="cover-bottom">WWW.AUTOBANKER.CA</div>
+        </div>
         <div class="cover-content">
-            <div class="brand">AUTOBANKER</div>
-            <div class="cover-subtitle">INSIDER STRATEGY GUIDE</div>
-            <div class="cover-title">The Credit<br>Recovery Playbook</div>
+            <div class="brand">AutoBanker</div>
+            <div class="cover-divider"></div>
+            <div class="cover-title">The Credit<br>Recovery<br>Playbook</div>
+            <div class="cover-subtitle">The exact blueprint to rebuilding your credit score fast while driving the car you deserve.</div>
         </div>
     </div>
 
@@ -164,37 +345,47 @@
     <div class="page content-page">
         <div class="page-header">
             <div class="brand-small">AUTOBANKER</div>
-            <div style="color: #666; font-size: 0.9rem;">1. Decoding the Score</div>
+            <div class="section-title">01 / Decoding the Algorithm</div>
         </div>
 
         <h2>How Equifax & TransUnion Actually Score You</h2>
-        <p>Before you can rebuild your credit, you need to know exactly how the algorithms grade you. Many Canadians waste years trying to fix their credit because they focus on the wrong things.</p>
+        
+        <p class="lead-paragraph">Before you can rebuild your credit, you need to understand the math behind it. Most Canadians waste years trying to fix their credit because they focus their energy on the wrong things.</p>
+        
+        <p>Lenders rely heavily on automated systems to determine your creditworthiness. By understanding the exact breakdown of how your score is calculated, you can stop making blind guesses and start taking strategic actions that force your score to rise.</p>
         
         <div class="grid-2">
             <div class="stat-card">
-                <h3 style="margin-top: 0; font-size: 1.2rem; color: var(--gold);">35% - Payment History</h3>
-                <p style="font-size: 0.9rem;">The biggest factor. A single 30-day late payment can drop your score by up to 100 points. Consistency is everything.</p>
+                <h4>35%</h4>
+                <p><strong>Payment History:</strong> The heaviest factor. A single 30-day late payment can drop your score by up to 100 points. Consistency is mathematically everything.</p>
             </div>
             <div class="stat-card">
-                <h3 style="margin-top: 0; font-size: 1.2rem; color: var(--gold);">30% - Credit Utilization</h3>
-                <p style="font-size: 0.9rem;">How much of your available credit card limits you are using. Maxed-out cards tank your score immediately.</p>
+                <h4>30%</h4>
+                <p><strong>Credit Utilization:</strong> Maxed-out cards tank your score immediately. This measures how much of your available credit limits you are currently using.</p>
             </div>
             <div class="stat-card">
-                <h3 style="margin-top: 0; font-size: 1.2rem; color: var(--gold);">15% - Credit Age</h3>
-                <p style="font-size: 0.9rem;">The average age of all your accounts. Never close your oldest credit card, even if you don't use it anymore.</p>
+                <h4>15%</h4>
+                <p><strong>Credit Age:</strong> The average age of all your accounts. Never close your oldest credit card, even if you do not use it anymore.</p>
             </div>
             <div class="stat-card">
-                <h3 style="margin-top: 0; font-size: 1.2rem; color: var(--gold);">10% - Credit Mix</h3>
-                <p style="font-size: 0.9rem;">Having only credit cards is bad. Lenders want to see a mix of revolving credit (cards) and installment credit (car loans).</p>
+                <h4>10%</h4>
+                <p><strong>Credit Mix:</strong> Having only credit cards is seen as risky. Lenders want to see a mix of revolving credit and installment credit (like a car loan).</p>
             </div>
         </div>
 
-        <h2 style="margin-top: 1.5rem;">The Installment Loan Secret</h2>
-        <p>If you have bad credit, getting another credit card will barely move your score. Credit cards are "revolving credit," which lenders view as high-risk.</p>
-        <p>An auto loan is an <strong>installment loan</strong>. Because it is backed by an asset (the car) and has a fixed payment schedule, the credit bureaus weigh it heavily. Making 6 to 12 months of on-time payments on an auto loan is mathematically the fastest way to force your credit score to jump back into the "Good" range.</p>
+        <h3>The Installment Loan Secret</h3>
+        <p>If you have bad credit, getting approved for another high-interest credit card will barely move your score. Credit cards represent "revolving credit," which lenders naturally view as a high-risk indicator if mismanaged.</p>
+        
+        <p>An auto loan, however, is an <strong>installment loan</strong>. Because it is backed by a tangible asset (the car) and follows a fixed, predictable payment schedule, the credit bureaus weigh it heavily. Establishing 6 to 12 months of on-time payments on an auto loan is unequivocally the fastest method to catapult your credit score back into the "Good" range.</p>
 
-        <div class="highlight-box">
-            <strong>Insider Secret:</strong> After 12 months of perfect payments on a subprime car loan, your score will usually improve enough to qualify for <strong>VIP Refinancing</strong>, cutting your interest rate in half.
+        <div class="pull-quote">
+            <div class="pull-quote-title">The Refinance Loophole</div>
+            <p>After 12 months of perfect payments on a subprime car loan, your score typically improves enough to qualify for <strong>VIP Refinancing</strong>—allowing you to trade out of the high-rate loan and cut your interest rate in half.</p>
+        </div>
+
+        <div class="page-footer">
+            <span>THE CREDIT RECOVERY PLAYBOOK</span>
+            <span>PAGE 1</span>
         </div>
     </div>
 
@@ -202,26 +393,43 @@
     <div class="page content-page">
         <div class="page-header">
             <div class="brand-small">AUTOBANKER</div>
-            <div style="color: #666; font-size: 0.9rem;">2. Instant Boost Strategies</div>
+            <div class="section-title">02 / Actionable Strategies</div>
         </div>
 
-        <h2>3 Steps to Boost Your Score Today</h2>
+        <h2>Three Strategies to Boost Your Score Today</h2>
         
-        <h3>1. The 30% Utilization Rule</h3>
-        <p>If you have a credit card with a $1,000 limit, never let the balance go above $300 (30%). If your cards are currently maxed out, your score is being artificially suppressed. Paying them down to below 30% will trigger an immediate, massive jump in your score the moment the statement cuts next month.</p>
+        <p class="lead-paragraph">You do not have to wait years to see your score improve. By executing these three targeted strategies, you can trigger a positive reporting cycle in as little as 30 days.</p>
+        
+        <ol class="custom-list">
+            <li>
+                <h4>The 30% Utilization Rule</h4>
+                <p>If you have a credit card with a $1,000 limit, never let the balance go above $300 (30%). If your cards are currently maxed out, your score is being artificially suppressed by the algorithm. Paying them down to below 30% will trigger an immediate, massive jump in your score the moment your monthly statement cuts.</p>
+            </li>
+            
+            <li>
+                <h4>Soft Pulls vs. Hard Pulls</h4>
+                <p>Every time a bank formally checks your credit to approve a loan, it records a "Hard Pull," which drops your score by 5 to 10 points. If you visit a traditional dealership, their finance office might blindly shotgun your application to 10 different banks at once, instantly causing 10 hard pulls and ruining your credit file. Always use an auto broker (like AutoBanker) who performs a single soft pull to evaluate your file without damage.</p>
+            </li>
 
-        <h3>2. Soft Pulls vs Hard Pulls</h3>
-        <p>Every time a bank checks your credit to approve a loan, it records a "Hard Pull," which drops your score by 5 to 10 points. If you visit a traditional dealership, they might send your application to 10 different banks at once, causing 10 hard pulls and instantly ruining your credit. Always use an auto broker (like AutoBanker) who performs a single soft pull to evaluate your file.</p>
+            <li>
+                <h4>Dispute Bureau Errors</h4>
+                <p>Over 20% of Canadians have glaring errors on their Equifax or TransUnion reports. You might have late payments listed that you actually paid on time, or old collections that should have fallen off after 6 years. Order your free report directly from Equifax.ca and dispute any errors—they are legally required to remove them within 30 days if they cannot verify the debt.</p>
+            </li>
+        </ol>
 
-        <h3>3. Dispute Bureau Errors</h3>
-        <p>Over 20% of Canadians have errors on their Equifax or TransUnion reports. You might have late payments listed that you actually paid on time, or old collections that should have fallen off after 6 years. Order your free report directly from Equifax.ca and dispute any errors—they are legally required to remove them within 30 days if they cannot prove them.</p>
+        <div class="cta-box">
+            <h3>Ready to Rebuild?</h3>
+            <p>The fastest way to fix your credit is by driving a car you love with an affordable payment that repairs your score every month.</p>
+            <a href="https://autobanker.ca/apply-now.html" class="cta-link">Secure Your Approval</a>
+            <p style="margin-top: 1.5rem; font-size: 0.9rem; margin-bottom: 0;">Or call us directly at <strong>+1-647-931-5876</strong></p>
+        </div>
 
-        <div style="margin-top: 2rem; text-align: center; padding: 1.5rem; border: 2px solid var(--gold); border-radius: 10px;">
-            <h3 style="font-family: 'Cinzel', serif; color: var(--gold); font-size: 1.3rem; margin-top:0; margin-bottom: 0.5rem;">Ready to Rebuild?</h3>
-            <p>The fastest way to fix your credit is by driving a car you love with an affordable payment.</p>
-            <p style="font-size: 1.15rem; margin-top: 1rem;"><strong><a href="https://autobanker.ca/apply-now.html" style="color: var(--gold); text-decoration: none;">Apply now!</a></strong> or Call us directly at 647-931-5876</p>
+        <div class="page-footer">
+            <span>THE CREDIT RECOVERY PLAYBOOK</span>
+            <span>PAGE 2</span>
         </div>
     </div>
 
 </body>
 </html>
+

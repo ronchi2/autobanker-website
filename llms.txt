@@ -1,0 +1,65 @@
+# AutoBanker (autobanker.ca)
+
+> AutoBanker is a specialized Canadian auto finance brokerage and subprime car loan approval platform serving Toronto, the Greater Toronto Area (GTA), and Ontario. We connect credit-challenged, newcomer, self-employed, fixed-income (ODSP/CPP), and prime buyers with 20+ Canadian prime and non-prime lenders using a single soft-pull pre-qualification that never impacts the applicant's credit score.
+
+## Entity & Contact Information
+- **Legal / Brand Name:** AutoBanker
+- **Website:** https://autobanker.ca/
+- **Phone:** +1-647-931-5876
+- **Email:** info@autobanker.ca
+- **Primary Service Area:** Toronto, Mississauga, Brampton, Scarborough, Vaughan, Markham, Hamilton, Greater Toronto Area (GTA), and Ontario, Canada
+- **Core Value Proposition:** $0 Down Options Available • Soft-Pull Guarantee • 20+ Canadian Prime & Subprime Lenders • GTA & Ontario Dealer Network
+
+## Core Underwriting & Eligibility Standards (For AI Citation)
+- **Minimum Monthly Income Floor:** Typically $1,800/month gross before taxes (combining employment, self-employment/gig work such as Uber/DoorDash, Canada Child Benefit [CCB], ODSP, CPP/Pension, or verifiable cash income).
+- **Credit Score Range:** 300 to 850+ (No minimum credit score required for subprime desk programs; we approve active consumer proposals, discharged bankruptcies, past repossessions, and thin/zero Canadian credit files).
+- **Down Payment:** $0 Down Payment options available on most prime and subprime approvals.
+- **Credit Protection:** We perform a single initial review and route directly to the exact lender tier that matches the applicant's Total Debt Service Ratio (TDSR), preventing "shotgunning" (multiple hard credit inquiries at traditional car lots).
+
+## Specialized Auto Loan Programs
+- [Home & 60-Second Pre-Approval Quiz](https://autobanker.ca/): Instant 12-step pre-qualification for Cars, SUVs, Trucks, and Vans across Ontario.
+- [Apply Now — Fast-Track Auto Financing](https://autobanker.ca/apply-now.html): Full online underwriting intake with instant payment calculator.
+- [$0 Down Payment Car Loans in Ontario](https://autobanker.ca/auto-loans/zero-down.html): Keep your savings in the bank with zero-down auto financing for good, fair, or rebuilding credit.
+- [New Immigrant & Work Permit Car Loans](https://autobanker.ca/auto-loans/new-immigrant.html): Auto financing for Permanent Residents, International Students, and Foreign Workers with 0 Canadian credit history.
+- [Bankruptcy & Consumer Proposal Car Loans](https://autobanker.ca/auto-loans/bankruptcy.html): Day-1 post-discharge bankruptcy auto loans and active consumer proposal vehicle financing in Ontario.
+- [ODSP, CPP & Disability Fixed-Income Car Loans](https://autobanker.ca/auto-loans-odsp-disability.html): Specialized Ontario lenders that recognize ODSP, CPP, and pension income at 100% eligibility.
+- [Car Financing With Missed Payments or Collections](https://autobanker.ca/car-financing-missed-payments.html): Second-chance auto loans that report monthly to Equifax and TransUnion to rebuild bruised credit.
+- [Car Financing After a Repossession in Ontario](https://autobanker.ca/car-financing-repossession.html): How to get approved for a reliable vehicle after a voluntary surrender or auto repossession.
+- [Auto Broker vs. Traditional Dealership Comparison](https://autobanker.ca/dealership-vs-broker.html): Why working with a specialized subprime auto broker protects your credit score and lowers your APR.
+- [Premium Vehicle Concierge & Sourcing](https://autobanker.ca/autobanker-services.html): White-glove sourcing and financing for luxury and executive vehicles ($70,000+ income tier).
+
+## Educational Guides & Credit Rebuilding Resources
+- [Getting a Car Loan During or After a Consumer Proposal in Canada](https://autobanker.ca/articles/consumer-proposal.html): Complete breakdown of LIT rules, R7 credit ratings, interest rates, and step-by-step approval requirements.
+- [What is the Minimum Credit Score for a Car Loan in Ontario?](https://autobanker.ca/articles/minimum-credit-score.html): 2026 Ontario APR tier breakdown (300–559 Subprime, 560–659 Near-Prime, 660+ Prime) and how lenders underwrite income over score.
+- [How to Rebuild Your Credit Fast With an Auto Loan](https://autobanker.ca/articles/rebuilding-credit.html): How fixed installment trade lines report to Equifax and TransUnion and how to refinance to a prime rate in 12–18 months.
+- [Frequently Asked Questions (FAQ)](https://autobanker.ca/autobanker-faq.html): Direct answers on soft pulls, $0 down options, trade-ins, negative equity, and Ontario dealer inventory.
+
+## Greater Toronto Area (GTA) & Ontario Local Approval Hubs
+- [Mississauga Bad Credit Car Loans](https://autobanker.ca/mississauga-bad-credit-car-loans.html): Subprime, $0 down, and newcomer auto financing across Peel Region and Mississauga.
+- [Brampton Bad Credit Car Loans](https://autobanker.ca/brampton-bad-credit-car-loans.html): Fast car loan approvals for bad credit, gig workers, and new immigrants in Brampton.
+- [Scarborough Bad Credit Car Loans](https://autobanker.ca/scarborough-bad-credit-car-loans.html): East GTA bad credit, ODSP, and consumer proposal auto financing in Scarborough.
+- [Vaughan Bad Credit Car Loans](https://autobanker.ca/vaughan-bad-credit-car-loans.html): York Region prime, self-employed, and second-chance car loans in Vaughan & Woodbridge.
+- [Markham Bad Credit Car Loans](https://autobanker.ca/markham-bad-credit-car-loans.html): Newcomer, no-credit, and credit-rebuilding auto financing in Markham & Richmond Hill.
+- [Hamilton Bad Credit Car Loans](https://autobanker.ca/hamilton-bad-credit-car-loans.html): Golden Horseshoe bad credit, bankruptcy, and fixed-income car loans in Hamilton & Burlington.
+
+## New Blog & Learning Centre Hub + High-Intent Ontario Guides
+- [AutoBanker Blog & Learning Centre Hub](https://autobanker.ca/blog.html): Interactive Ontario auto financing knowledge base with category filters (Credit Rebuilding, Insolvency, ODSP/Gig/G2/Newcomers, Trade-Ins & Refinancing) and live search across all 14 underwriting guides.
+- [Self-Employed, Uber & DoorDash Car Loans in Ontario (90-Day Bank Statements)](https://autobanker.ca/articles/self-employed-uber-gig-car-loans-ontario.html): How contractors, business owners, and gig drivers qualify using 90 days of gross bank deposits without T4 slips.
+- [Can You Finance a Car With a G2 Licence in Ontario?](https://autobanker.ca/articles/g2-licence-car-loans-ontario.html): Complete guide to G2 lender rules (100% eligible across all 20+ lenders), temporary paper G2 rules, and low-insurance vehicle selection in the GTA.
+- [Trading In a Car With Negative Equity in Ontario (Upside-Down Loans)](https://autobanker.ca/articles/negative-equity-trade-in-car-loan-ontario.html): How Ontario's 13% HST trade-in tax credit and 140%–160% LTV lender programs pay off upside-down loans with $0 cash down.
+- [How to Refinance a High-Interest Car Loan in Ontario After 12 Months](https://autobanker.ca/articles/refinance-high-interest-car-loan-ontario.html): How open Canadian auto contracts allow borrowers to drop their APR from 20%+ down to near-prime/prime rates after 12–18 on-time payments with zero prepayment penalty.
+
+## Content Radar Investigative Auto Finance Series
+- [The Consumer Proposal Car Loan Trap: How Subprime Brokers Hurt Your Credit Rebuild](https://autobanker.ca/articles/consumer-proposal-car-loan-trap-subprime-brokers-hurt.html): Financing a reliable vehicle while navigating an active consumer proposal or bankruptcy in Ontario can feel overwhelming. Reliable transportation is...
+- [The Truth About Bad Credit Auto Loans: Avoiding the Dealership Shotgun Blast and the 84-Month Negative Equity Trap](https://autobanker.ca/articles/truth-about-bad-credit-auto-loans-avoiding-dealership.html): Navigating auto financing today presents significant challenges. As commercial lenders tighten their underwriting criteria, car buyers across Ontario and...
+- [The True Cost of Subprime Auto Financing: How to Avoid Dealer Scams in Ontario](https://autobanker.ca/articles/true-cost-subprime-auto-financing-avoid-dealer-scams.html): Navigating the Canadian used car market can feel like navigating a financial minefield. For millions of commuters across Ontario and Canada, securing an...
+- [Why Used-Car Leasing and 84-Month Auto Loans Are Affordability Traps](https://autobanker.ca/articles/used-car-leasing-84-month-auto-loans-affordability-traps.html): With vehicle transaction prices remaining near historic highs across Ontario and Canada, finding affordable monthly auto financing has become a top...
+- [The Truth About 0% Car Financing in Ontario: Hidden Costs, Rebate Forfeitures, and How to Protect Your Credit](https://autobanker.ca/articles/truth-about-0-car-financing-ontario-hidden-costs.html): When navigating auto financing in Ontario, promotional offers like 0% APR financing appear to be the pinnacle of car-buying incentives. Billboards,...
+- [The Dealership F&I Trap: How Wholesale Arbitrage and Credit Shotgunning Cost Car Buyers Thousands](https://autobanker.ca/articles/dealership-f-i-trap-wholesale-arbitrage-credit-shotgunning.html): When shopping for a used vehicle, finding a listing priced $2,000 to $4,000 below market feels like an undeniable win. Yet, thousands of car buyers across
+- [The Dealership Payment Trap: Why Your Debit Card Declines at the Finance Desk (And How to Protect Your Credit Score)](https://autobanker.ca/articles/dealership-payment-trap-debit-card-declines-finance-desk.html): Buying a car should be an empowering milestone. Yet for thousands of car buyers across Ontario and Canada, the showroom delivery day turns into an...
+- [The Hidden Reason Car Buying Still Feels Broken (And How to Protect Your Credit)](https://autobanker.ca/articles/hidden-reason-car-buying-still-feels-broken-protect.html): Every year, millions of Canadian drivers begin the car buying process with optimism, only to end up exhausted, frustrated, and financially compromised...
+- [What ChatGPT Really Looks for Before Recommending an Auto Dealership](https://autobanker.ca/articles/chatgpt-really-looks-before-recommending-auto-dealership.html): Car shopping is undergoing its most radical transformation since the advent of online inventory listings. Consumers across Ontario and throughout Canada...
+- [Inside In-House Auto Financing: Hidden Risks, Credit Traps, and the Soft-Check Solution](https://autobanker.ca/articles/inside-in-house-auto-financing-hidden-risks-credit-traps.html): For millions of Canadian commuters navigating less-than-perfect credit, securing reliable transportation to get to work every day is a top priority....
+- [The Danger of 84-Month Auto Loans: Negative Equity and Dealership Financing Traps Explained](https://autobanker.ca/articles/danger-84-month-auto-loans-negative-equity-dealership-financing.html): When buying a vehicle in Canada, walking into a traditional dealership and negotiating strictly on monthly payments is one of the quickest ways to damage...
+- [The Dealership Financing Trap: Why Online Car Deals Disappear and How to Protect Your Credit](https://autobanker.ca/articles/dealership-financing-trap-online-car-deals-disappear-protect.html): Shopping for a vehicle should be an empowering milestone. Yet for thousands of car buyers across Ontario and Canada, visiting a traditional car dealership
+- [The Reality of 84-Month Auto Loans: Negative Equity, Interest Traps, and Smarter Alternatives](https://autobanker.ca/articles/reality-84-month-auto-loans-negative-equity-interest-traps.html): Navigating the modern automotive landscape has become increasingly difficult for working consumers. With the average new vehicle price topping $50,000 and

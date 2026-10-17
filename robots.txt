@@ -1,0 +1,31 @@
+User-agent: *
+Allow: /
+Disallow: /functions/
+Disallow: /api/
+Disallow: /thank-you.html
+Disallow: /autobanker-thank-you.html
+
+# AI Search & Answer Engine Crawlers Explicitly Allowed
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://autobanker.ca/sitemap.xml
+# LLMs Context File: https://autobanker.ca/llms.txt
